@@ -14,23 +14,18 @@ export function getQueryString(name: string): string | null {
   return null;
 }
 
+
 /**
- * @description 转换 123为123.00
+ * @description 睡眠
  *
  * @export
- * @param {*} amount
- * @returns {string}
+ * @param {number} timer
+ * @returns {*}
  */
-export function getAmountFloat(amount: any): string {
-  if (!amount) {
-    return '0.00';
-  }
-  let leftNum = amount.toString().split('.')[0];
-  let floatNum = amount.toString().split('.')[1];
-
-  if (!floatNum) {
-    return `${amount}.00`;
-  }
-  //补0 处理 100.30 会变成 100.3 的问题
-  return floatNum.length == 1 ? `${leftNum}'.'${floatNum}'0` : floatNum;
+export function sleep(timer: number): any {
+  return new Promise((resolve: any) => {
+    setTimeout(() => {
+      resolve(true);
+    }, timer);
+  });
 }
