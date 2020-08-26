@@ -1,6 +1,6 @@
 {
   "name": "lxd-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "常用函数组件库",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
